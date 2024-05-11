@@ -1,0 +1,72 @@
+https://fontawesome.com/v5/search?q=box&o=r&m=free
+
+
+
+Auth:
+go to env
+===========
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+
+make following commands
+======================
+php artisan migrate
+composer require laravel/ui
+php artisan ui bootstrap
+npm install
+npm run dev
+php artisan ui bootstrap --auth
+
+
+Ref:
+https://www.itsolutionstuff.com/post/laravel-10-bootstrap-auth-scaffolding-tutorialexample.html#google_vignette
+https://medium.com/@online-web-tutor/laravel-10-authentication-with-laravel-ui-tutorial-ce163cce0af7
+https://larainfo.com/blogs/how-to-use-laravel-ui-authentication-in-laravel-10
+https://onlinecode.org/laravel-10-authentication-tutorial/
+https://www.techiediaries.com/laravel-10-bootstrap-auth-scaffolding/
+https://www.cloudways.com/blog/setup-laravel-login-authentication/
+https://techvblogs.com/blog/laravel-9-authentication-tutorial
+https://www.allphptricks.com/laravel-custom-user-registration-and-login-tutorial/
+
+
+
+Clear all caches in Laravel
+===========================
+php artisan optimize:clear
+php artisan cache:clear
+php artisan config:clear
+php artisan event:clear
+php artisan route:clear
+php artisan schedule:clear-cache
+php artisan view:clear
+
+
+to disable cache set to ENV
+================
+CACHE_DRIVER=null
+
+
+Create your own library:helpers
+-------------------------------
+
+Create a helpers.php file in your app folder and load it up with composer:
+
+"autoload": {
+    "classmap": [
+        ...
+    ],
+    "psr-4": {
+        "App\\": "app/"
+    },
+    "files": [
+        "app/Helpers/html_helper.php" // <---- ADD THIS
+    ]
+},
+After adding that to your composer.json file, run the following command:
+composer dump-autoload
+
+php artisan make:controller Api/ProductController --api

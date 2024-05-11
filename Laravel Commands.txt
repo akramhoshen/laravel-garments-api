@@ -1,0 +1,73 @@
+1. Creating Controllers:
+   php artisan make:controller MyController
+   php artisan make:controller UserController --resource
+   php artisan make:controller Api/ProductController --api
+
+2. Creating Models:
+   php artisan make:model MyModel
+   --with maigration
+   php artisan make:model MyModel -m
+   --with maigration and controller
+   php artisan make:model MyModel -mc
+
+3. Creating Migrations:
+   php artisan make:migration create_table_name
+
+4. Running Migrations:
+   php artisan migrate
+
+5. Rollback Last Migration:
+   php artisan migrate:rollback
+
+6. Creating Seeders:
+   php artisan make:seeder MySeeder
+
+7. Running Seeders:
+   php artisan db:seed
+
+8. Creating Middleware:
+   php artisan make:middleware MyMiddleware
+
+9. Creating Requests:
+   php artisan make:request MyRequest
+
+10. Creating Jobs:
+    php artisan make:job MyJob
+
+11. Creating Events:
+    php artisan make:event MyEvent
+
+12. Creating Listeners:
+    php artisan make:listener MyListener
+
+13. Creating Policies:
+    php artisan make:policy MyPolicy
+
+14. Clearing Cache:
+    php artisan cache:clear
+
+15. Optimizing Class Loading:
+    php artisan optimize
+
+16. Creating a New Laravel Project (using Composer):
+    composer create-project laravel/laravel project-name
+    composer create-project --prefer-dist laravel/laravel project-name
+
+17. Starting Laravel Development Server:
+    php artisan serve
+
+18. Generating Key for .env:
+    php artisan key:generate
+
+19. Optimizing Configuration Files:
+    php artisan config:cache
+
+20. Optimizing Route Loading:
+    php artisan route:cache
+
+21. Viewing All Routes:
+    php artisan route:list
+    php artisan r:l
+
+22. Refresh new column in DB table
+    php artisan migrate:refresh --path=/database/migrations/2024_03_14_100513_create_raw_materials_table.php

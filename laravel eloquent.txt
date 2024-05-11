@@ -1,0 +1,3 @@
+https://laravel.com/docs/5.0/eloquent
+https://laravel.com/docs/10.x/eloquent
+https://www.cloudways.com/blog/models-views-laravel/
